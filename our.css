@@ -4,7 +4,6 @@
 }
 
 ul{
-    background: black;
     height: 36px;
     line-height: 36px;
     font-family: Arial, Helvetica, sans-serif;
@@ -29,4 +28,12 @@ a:hover{
     border-radius: 50px;
 
     background: rgb(221, 63, 200);
+}
+.parent{
+    background: black;
+    display: flex;
+    justify-content: space-between;
+}
+.bname{
+    color: white;
 }
