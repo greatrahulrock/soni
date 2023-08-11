@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+    background: black;
+    height: 36px;
+    line-height: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform : uppercase;
+    list-style-type: none;
+}
+li{
+    float: left;
+    border-right: 1px solid white;
+    border-left: 1px solid white;;
+    border-radius: 50px;
+    margin: 0 5px;
+}
+a{
+    padding: 0 20px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    border-radius: 50px;
+
+    background: rgb(221, 63, 200);
+}
