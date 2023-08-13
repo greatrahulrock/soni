@@ -1,43 +1,323 @@
 *{
     margin: 0px;
     padding: 0px;
+
+}
+body{
+    background: lightblue;
 }
 
-ul{
-    height: 36px;
-    line-height: 36px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-transform : uppercase;
-    list-style-type: none;
+.container{
+width: 1000px;
 }
-li{
+#mb{
+    display: none;
+}
+.parent{
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 36px;
+    color: white;
+    line-height: 36px;
+}
+
+.menubar ul{
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+.menubar ul li{
     float: left;
     border-right: 1px solid white;
     border-left: 1px solid white;;
-    border-radius: 50px;
-    margin: 0 5px;
+    
 }
-a{
-    padding: 0 20px;
+.menubar ul li a{
     display: block;
-    text-decoration: none;
+    text-decoration-line: none;
     color: white;
+    padding: 0px 20px;
 }
-a:hover{
-    border-radius: 50px;
+.menubar ul li a:hover{
+    background: rgb(40, 40, 218);
+}
 
-    background: rgb(221, 63, 200);
+.slider{
+    height: 300px;
+    animation-name: rahul;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
 }
-.parent{
-    background: black;
-    display: flex;
-    justify-content: space-between;
+
+@keyframes rahul{
+    0%{
+        background-image: url("slider\ image/first.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    25%{
+        background-image: url("slider\ image/bc.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    50%{
+        background: url("slider\ image/second.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    75%{
+background-image: url("slider\ image/third.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+    }
+    100%{
+        background-image: url("slider\ image/fourth.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
 }
-.bname{
+
+.slider h1{
+    position: relative;
+    top: 250px;
+    left: 50px;
     color: white;
+    width: 200px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 5px 0px;
+    border: 1px solid red;
+    border-radius: 50px;
+    box-shadow: 0px 0px 50px 10px red;
+background-image: linear-gradient(blue,transparent,gray);
+animation-name: rohan;
+animation-iteration-count: infinite;
+animation-duration: 10s;
+animation-delay: 2s;
 }
-.container{
-    width: 1000px;
+
+@keyframes rohan{
+    0%{
+        box-shadow: 0px 0px 50px 10px lightblue;
+    }
+    25%{
+        box-shadow: 0px 0px 50px 10px lime;
+    }
+    50%{
+        box-shadow: 0px 0px 50px 10px rgb(219, 30, 210);
+    }
+    75%{
+        box-shadow: 0px 0px 50px 10px rgb(29, 26, 245);
+    }
+    100%{
+        box-shadow: 0px 0px 50px 10px rgb(255, 255, 11);
+    }
+}
+.home{
+    margin: 20px 0px; 
+    padding: 0px 5px;  
+}
+.home h3{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.service{
+    margin: 5px;
+}
+.service h3,h1{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.service ul li{
+    
+    display: inline-block;
+    width: 300px;
+    margin: 5px;
+    border: 2px solid red;
+    padding: 5px;
+    
+    
+}
+.sc{
+    background-image: url("service/cimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.sh{
+    background-image: url("service/himage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+.sj{
+    background-image: url("service/jimage.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.test{
+    margin: 20px;
     height: 100px;
+
 }
+.test h3{
+    text-align: center;
+}
+.test ul li img{
+    width: 50px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.test ul li{
+    display: inline-block;
+    width: 300px;
+}
+.tsub{
+    display: flex;
+}
+.userd{
+    text-align: left;
+    margin: 5px;
+}
+
+
+.foot{
+    background: black;
+    color: white;
+    height: 200px;
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        width: auto;
+        box-sizing: border-box;
+    }
+    .mclose{
+        display: flex;
+        justify-content: space-around;
+    }
+    .parent{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .menubar ul li{
+        float: none;
+        display: none;
+    }
+    #mb{
+        display: block;
+    
+    }
+    .heme{
+        width: 350px;
+        height: auto;
+    }
+    .test{
+        margin: 20px;
+        height: 0px;
+        height: auto;
+        display: block;
+    }
+    .test ul li{
+        display: block;
+        font-size: 20px;
+        padding: 10px 0px;
+    }
+    .service{
+        width: auto;
+    }
+    .service ul li{
+        display: block;
+        margin: 10px auto;
+    }
+    .mbhl ul li{
+        background: red;
+        display: block;
+    }
+    
+
+}
+@media (min-width: 500px) and (max-width: 900px){
+    .container{
+        max-width: 100%;
+    }
+    .parent{
+        max-width: 100%;
+        min-width: auto;
+        font-size: 13px;
+
+    }
+    .parent ul li a{
+        padding: 0 8px;
+    }
+    
+    
+    .service{
+        max-width: 100%;
+        margin: 50px;
+    }
+    .service ul li{
+        width: 90%;
+        height: auto;
+    }
+    .test{
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+    }
+    .test ul li{
+    
+        width: 90%;
+        
+    }
+
+}
+@media (min-width: 1001px) and (max-width: 1920px){
+    .container{
+        width: 100%;
+        max-height: 3000px;
+        
+    }
+    .service{
+        width: 100%;
+    }
+    .service ul li{
+        width: 30%;
+        font-size: 20px;
+    
+    }
+    .test{
+        width: 100%;
+    }
+    .test ul li{
+        width: 30%;
+        font-size: 20px;
+    }
+    .foot{
+        min-width: 400px;
+        max-height: auto;
+    }
+}
+@media (min-width: 1921px) {
+    .container{
+        width: 100%;
+        font-size: 50px;
+    }
+    
+}
+
+
+
+
+
